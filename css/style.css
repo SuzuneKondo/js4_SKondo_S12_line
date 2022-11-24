@@ -1,0 +1,214 @@
+/* 繋がったかくにん済 */
+
+html {
+    font-size: 62.5%;/* 16px*62.5%=10px */
+    font: optional;
+    font-family: 'Open Sans', sans-serif;
+    color: #222222;
+}
+
+header{
+    background-color: #fff;
+}
+
+footer{
+    background-color: #5377A3;
+    padding: 50px 0;
+}
+
+/* ---- header ---- */
+
+.header-box{
+    display: flex;
+    justify-content: end;
+}
+
+.header-img{
+    width: 400px;
+    margin: 5px 0;
+}
+
+.banana{
+    max-width: 70px;
+    margin: 0 5px;
+}
+
+/* ---- main ---- */
+
+.talk-box{
+    background-color: #F3D854;
+    display: flex;
+    justify-content: center;
+    max-height: 1500px;
+}
+
+#output{
+    border: 1px #5377A3 solid;
+    max-height: 600px;
+    width: 500px;
+    margin: 50px auto;
+    overflow-y: scroll;
+    background-color: #f2eed0;
+    border-radius: 20px;
+}
+
+.m-img{
+    display: flex;
+    flex-direction: column;
+}
+
+.lets{
+    max-width: 250px;
+    margin: 200px 100px 0 100px;
+}
+
+.minion{
+    max-width: 250px;
+    margin: 0 100px;
+}
+
+.me-talk{
+    display: flex;
+    flex-direction: column;
+    margin: 200px auto 0 100px;
+}
+
+#uname{
+    background-color: #a9d6de;
+    border: 0.5px #5377A3 solid;
+    border-radius: 2px;
+}
+
+.name{
+    margin: 10px 0;
+    text-align: center;
+}
+
+
+.text-area{
+    background-color: #a9d6de;
+    border: 0.5px #5377A3 solid;
+    border-radius: 5px;
+}
+
+.button{
+    text-align: right;
+    margin: 10px 0;
+}
+
+#send {
+    background-color: #F7E7B6;
+    border: 2px solid #5377A3;
+    border-radius: 30px;
+    box-shadow: #5377A3 2px 2px 0 0;
+    color: #222222;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.8rem;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  #send:hover {
+    background-color: #f2eed0;
+  }
+  
+  #send:active {
+    box-shadow: #5377A3 2px 2px 0 0;
+    transform: translate(2px, 2px);
+  }
+  
+  @media (min-width: 768px) {
+    #send {
+      min-width: 100px;
+      padding: 0 10px;
+    }
+  }
+
+.stamps{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.stampb-img{
+    max-width: 100px;
+    border: 1px #5377A3 solid;
+    border-radius: 20px;
+}
+
+.stampt-img{
+    max-width: 100px;
+    border: 1px #5377A3 solid;
+    border-radius: 20px;
+}
+
+/* ---- jquery用 ----- */
+
+.msg{
+    font-size: 1.6rem;
+    max-width: 400px;
+}
+
+.msg-text{
+    margin: 10px 0;
+    line-height: 120%;
+}
+
+.msg:nth-child(odd) {
+    width: 40%;
+    background: #a9d6de;
+    margin: 10px 0 5px auto;
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.msg:nth-child(even) {
+    width: 40%;
+    background: #f3ba2c;
+    margin: 5px auto 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.bob{
+    font-size: 1.6rem;
+    max-width: 400px;
+    width: 40%;
+    background: #f3ba2c;
+    margin: 5px auto 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.bob-text{
+    margin: 10px 0;
+    line-height: 120%;
+}
+
+.msg-tim{
+    max-width: 200px;
+    margin: 10px 0 5px auto;
+}
+
+.msg-tims{
+    max-width: 200px;
+    margin: 10px 0 5px auto;
+}
+
+.msg-ban{
+    max-width: 200px;
+    margin: 10px 0 5px auto;
+}
+
+.msg-bans{
+    max-width: 200px;
+    margin: 10px 0 5px auto;
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>minion TALK</title>
+
+</head>
+
+<body>
+
+<header>
+<div class="header-box">
+    <img src="img/banana.png" alt="バナナ" class="banana">
+    <img src="img/header.png" alt="タイトル" class="header-img">
+    <img src="img/banana.png" alt="バナナ" class="banana">
+</div>
+</header>
+
+<!-- コンテンツ表示画面 --->
+<div>
+    <div class="talk-box">
+        <div class="m-img">
+            <div>
+                <img src="img/talk.png" alt="トークしよう" class="lets">
+            </div>
+            <div>
+                <img src="img/minion.png" alt="ミニオンの画像" class="minion">
+            </div>
+        </div>
+        <div class="box">
+            <div id="output"></div>
+        </div>
+        <div class="me-talk">
+            <div>
+                <div class="name">名前：<input type="text" id="uname"></div>
+                <div>
+                    <textarea id="text" cols="30" rows="10" class="text-area"></textarea>
+                </div>
+                <div class="button">
+                    <button id="send">送信</button>
+                </div>
+                <div class="stamps">
+                    <div class="stamp">
+                        <img src="img/s_banana.png" alt="バナナ" class="stampb-img">
+                    </div>
+                    <div class="stamp">
+                        <img src="img/s_tim.png" alt="ティム" class="stampt-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- コンテンツ表示画面 -->
+
+<!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="module" src="js/jquery.js"></script>
+<!-- JQuery -->
+
+<!--** 以下Firebase **-->
+<!-- <script type="module" src="js/jquery.js">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
+    import { getDatabase, ref, push, set, onChildAdded, remove,onChildRemoved } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDJxoKQPDLanSE-QvA3EoZYM1ZX2aSv2AI",
+      authDomain: "dev245-b69ad.firebaseapp.com",
+      projectId: "dev245-b69ad",
+      storageBucket: "dev245-b69ad.appspot.com",
+      messagingSenderId: "1015667969611",
+      appId: "1:1015667969611:web:3a691893ec0a47a96f87ce"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+</script> -->
+
+    <!-- const db = getDatabase(app); // RealtimeDatabase使うよ
+    const dbRef = ref(db, 'dev245'); // RealtimeDatabase”dev245“を使うよ refは参照する
+
+
+    // 送信処理を記述
+    $('#send').on('click', function(){
+
+        //id uname の場所を取得
+        const uname = $('#uname').val();
+        // console.log(uname,'unameの中身の確認');
+
+        //id text の場所を取得
+        const text = $('#text').val();
+        // console.log(text,'textの中身の確認');
+
+        //取得できているかかくにん
+        // これ必須！
+        // alert(uname + text);
+
+        //データの塊作り msgという名前
+        //uname text が鍵の名前
+        //作成したデータの塊をfirebaseに送信をします⇨つまりこれが保存になります🤗
+
+        const msg={
+            uname: uname,
+            text: text,
+        }
+
+        // firebaseに送る準備をしていることになります🤗
+        const newPostRef = push(dbRef) //データを送信できる準備
+        set(newPostRef, msg); // firebaseの登録できる場所に保存するイメージです🤗
+
+        //送信後に入力欄をからにする//valに””をつけるとからにしてくれる
+        $("#uname").val("");
+        $("#text").val("");
+
+        // カーソルを持っていく
+        $("#uname").focus();
+
+    // send送信イベント この下消さない
+    });
+
+
+    //受信処理を記述 functionの後（）に名前入れると、その場所にデータ入る
+    onChildAdded(dbRef, function(data){
+        
+        //ここから受信処理開始
+
+        //登録されたデータを取得//firebaseのデータ名（塊）を持ってくる
+        const msg=data.val();
+        console.log(msg, '取得したデータの塊')
+        
+        //登録されたデータを取得2//keyのデータ塊を持ってくる
+        const key = data.key;
+        console.log(key, 'データの塊にアクセス')
+
+        //es6のテンプレートリテラル※テンプレートリテラル使わないと怒られるレベルの
+        let h =`
+        <div class="msg">
+            <p>${msg.uname}</p>
+            <p>${msg.text}</p>
+        </div>
+        `
+
+        //htmlを埋め込み
+        //append();というおまじない
+        $("#output").append(h);
+
+    // onChildAdded イベント この下消さない
+    }); -->
+
+</body>
+
+<footer>
+
+</footer>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
