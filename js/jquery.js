@@ -9,10 +9,10 @@ import { getDatabase, ref, push, set, onChildAdded, remove, onChildRemoved } fro
 
 // Your web app's Firebase configuration
 
-///////////////////////////////
+////////////////////////////////
 //--ここにAPIキーを挿入する(●´ー｀●)
 
-//////////////////////////////
+///////////////////////////////
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
